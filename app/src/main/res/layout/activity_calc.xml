@@ -8,17 +8,6 @@
     tools:context="org.jermaine151.coolcalc.CalcActivity"
     android:background="@android:color/white">
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/calcBtn"
-        android:background="@android:color/transparent"
-        android:paddingTop="115dp"
-        android:src="@drawable/equal"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:paddingEnd="18dp" />
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -38,14 +27,15 @@
                 android:inputType="textPersonName"
                 android:text="0"
                 android:ems="10"
-                android:id="@+id/resultsText"
+                android:id="@+id/resultsView"
                 android:textSize="45dp"
                 android:layout_gravity="end"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingTop="60dp"
                 android:background="@android:color/transparent"
-                android:gravity="end" />
+                android:gravity="end"
+                android:cursorVisible="false" />
 
         </LinearLayout>
 
@@ -234,4 +224,15 @@
         </LinearLayout>
     </LinearLayout>
     </LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/calcBtn"
+        android:background="@android:color/transparent"
+        android:paddingTop="115dp"
+        android:src="@drawable/equal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:paddingEnd="18dp" />
 </RelativeLayout>
