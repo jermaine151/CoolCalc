@@ -185,20 +185,32 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:weightSum="4">
 
             <Button
                 android:text="@string/clearBtnText"
                 android:id="@+id/clearBtn"
                 android:textSize="24sp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:background="@color/calcAccentColor"
-                android:layout_weight=".32"
+                android:layout_weight="1"
                 android:layout_gravity="center"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginStart="10dp" />
+
+            <Button
+                android:text="@string/dotBtnText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/dotBtn"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textSize="30sp"
+                android:textColor="@android:color/black"
+                android:background="@android:color/transparent"
+                android:textStyle="bold" />
 
             <Button
                 android:text="@string/zeroBtnText"
@@ -207,17 +219,17 @@
                 android:textSize="30sp"
                 android:background="@android:color/transparent"
                 android:textColor="@android:color/black"
-                android:layout_weight=".01"
-                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
                 android:layout_gravity="center" />
 
             <ImageButton
                 android:layout_height="match_parent"
                 android:id="@+id/addBtn"
                 android:background="@android:color/transparent"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:src="@drawable/add"
-                android:layout_weight=".25"
+                android:layout_weight="1"
                 android:layout_gravity="center" />
 
         </LinearLayout>
