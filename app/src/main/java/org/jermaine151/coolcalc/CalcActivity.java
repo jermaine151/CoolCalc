@@ -39,6 +39,7 @@ public class CalcActivity extends Activity {
         Button eightBtn = (Button)findViewById(R.id.eightBtn);
         Button nineBtn = (Button)findViewById(R.id.nineBtn);
         Button zeroBtn = (Button)findViewById(R.id.zeroBtn);
+        Button dotBtn = (Button)findViewById(R.id.dotBtn);
 
         ImageButton calcBtn = (ImageButton)findViewById(R.id.calcBtn);
         ImageButton divideBtn = (ImageButton)findViewById(R.id.divideBtn);
@@ -121,6 +122,13 @@ public class CalcActivity extends Activity {
                 }
             });
 
+            dotBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dotPressed();
+                }
+            });
+
             addBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -200,6 +208,11 @@ public class CalcActivity extends Activity {
                 }
             }
             currentOperation = operation;
+        }
+
+        void dotPressed() {
+            runningNumber += ".";
+            resultsView.setText(runningNumber);
         }
 
         void numberPressed(int number) {

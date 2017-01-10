@@ -11,4 +11,5 @@
     <string name="nineBtnText">9</string>
     <string name="eightBtnText">8</string>
     <string name="zeroBtnText">0</string>
+    <string name="dotBtnText">.</string>
 </resources>
