@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CalcActivity extends Activity {
 
@@ -179,7 +180,7 @@ public class CalcActivity extends Activity {
         void processOperation(Operation operation) {
             if (currentOperation != null) {
 
-                if (runningNumber != "") {
+                if (!runningNumber.isEmpty()) {
                     rightValueStr = runningNumber;
                     runningNumber = "";
 
@@ -200,19 +201,26 @@ public class CalcActivity extends Activity {
                     runningNumber = "";
                     leftValueStr = String.valueOf(result);
                     resultsView.setText(leftValueStr.replaceAll("\\.0+$",""));
+                    currentOperation = operation;
                 }
             } else {
-                if (runningNumber != "") {
+                if (!runningNumber.isEmpty()) {
                     leftValueStr = runningNumber;
                     runningNumber = "";
+                    currentOperation = operation;
                 }
             }
-            currentOperation = operation;
+
         }
 
         void dotPressed() {
-            runningNumber += ".";
-            resultsView.setText(runningNumber);
+            if(!runningNumber.contains(".")) {
+                // Check for existing decimal
+                runningNumber += ".";
+                resultsView.setText(runningNumber);
+            } else {
+                Toast.makeText(getApplicationContext(), "Only 1 decimal can be entered!", Toast.LENGTH_SHORT).show();
+            }
         }
 
         void numberPressed(int number) {
