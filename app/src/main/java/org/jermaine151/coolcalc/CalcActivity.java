@@ -53,179 +53,177 @@ public class CalcActivity extends Activity {
 
         resultsView.setText("0");
 
-            oneBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    numberPressed(1);
-                }
-            });
+        oneBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberPressed(1);
+            }
+        });
 
-            twoBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    numberPressed(2);
-                }
-            });
+        twoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberPressed(2);
+            }
+        });
 
-            threeBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    numberPressed(3);
-                }
-            });
+        threeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberPressed(3);
+            }
+        });
 
-            fourBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    numberPressed(4);
-                }
-            });
+        fourBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberPressed(4);
+            }
+        });
 
-            fiveBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    numberPressed(5);
-                }
-            });
+        fiveBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberPressed(5);
+            }
+        });
 
-            sixBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    numberPressed(6);
-                }
-            });
+        sixBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberPressed(6);
+            }
+        });
 
-            sevenBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    numberPressed(7);
-                }
-            });
+        sevenBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberPressed(7);
+            }
+        });
 
-            eightBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    numberPressed(8);
-                }
-            });
+        eightBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberPressed(8);
+            }
+        });
 
-            nineBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    numberPressed(9);
-                }
-            });
+        nineBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberPressed(9);
+            }
+        });
 
-            zeroBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    numberPressed(0);
-                }
-            });
+        zeroBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberPressed(0);
+            }
+        });
 
-            dotBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    dotPressed();
-                }
-            });
+        dotBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dotPressed();
+            }
+        });
 
-            addBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    processOperation(Operation.ADD);
-                }
-            });
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                processOperation(Operation.ADD);
+            }
+        });
 
-            subtractBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    processOperation(Operation.SUBTRACT);
-                }
-            });
+        subtractBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                processOperation(Operation.SUBTRACT);
+            }
+        });
 
-            multiplyBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    processOperation(Operation.MULTIPLY);
-                }
-            });
+        multiplyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                processOperation(Operation.MULTIPLY);
+            }
+        });
 
-            divideBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    processOperation(Operation.DIVIDE);
-                }
-            });
+        divideBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                processOperation(Operation.DIVIDE);
+            }
+        });
 
-            calcBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    processOperation(Operation.EQUAL);
-                }
-            });
+        calcBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                processOperation(Operation.EQUAL);
+            }
+        });
 
-            clearBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    leftValueStr = "";
-                    rightValueStr = "";
-                    runningNumber = "";
-                    resultsView.setText("0");
-                    currentOperation = null;
-                    result = 0.0;
-                }
-            });
+        clearBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                leftValueStr = "";
+                rightValueStr = "";
+                runningNumber = "";
+                resultsView.setText("0");
+                currentOperation = null;
+                result = 0.0;
+            }
+        });
     }
-        void processOperation(Operation operation) {
-            if (currentOperation != null) {
+    void processOperation(Operation operation) {
+        if (currentOperation != null) {
 
-                if (!runningNumber.isEmpty()) {
-                    rightValueStr = runningNumber;
-                    runningNumber = "";
+            if (runningNumber != "") {
+                rightValueStr = runningNumber;
+                runningNumber = "";
 
-                    switch (currentOperation) {
-                        case ADD:
-                            result = Double.parseDouble(leftValueStr) + Double.parseDouble(rightValueStr);
-                            break;
-                        case SUBTRACT:
-                            result = Double.parseDouble(leftValueStr) - Double.parseDouble(rightValueStr);
-                            break;
-                        case MULTIPLY:
-                            result = Double.parseDouble(leftValueStr) * Double.parseDouble(rightValueStr);
-                            break;
-                        case DIVIDE:
-                            result = Double.parseDouble(leftValueStr) / Double.parseDouble(rightValueStr);
-                            break;
-                    }
-                    runningNumber = "";
-                    leftValueStr = String.valueOf(result);
-                    resultsView.setText(leftValueStr.replaceAll("\\.0+$",""));
-                    currentOperation = operation;
+                switch (currentOperation) {
+                    case ADD:
+                        result = Double.parseDouble(leftValueStr) + Double.parseDouble(rightValueStr);
+                        break;
+                    case SUBTRACT:
+                        result = Double.parseDouble(leftValueStr) - Double.parseDouble(rightValueStr);
+                        break;
+                    case MULTIPLY:
+                        result = Double.parseDouble(leftValueStr) * Double.parseDouble(rightValueStr);
+                        break;
+                    case DIVIDE:
+                        result = Double.parseDouble(leftValueStr) / Double.parseDouble(rightValueStr);
+                        break;
                 }
-            } else {
-                if (!runningNumber.isEmpty()) {
-                    leftValueStr = runningNumber;
-                    runningNumber = "";
-                    currentOperation = operation;
-                }
+                runningNumber = "";
+                leftValueStr = String.valueOf(result);
+                resultsView.setText(leftValueStr.replaceAll("\\.0+$",""));
             }
-
-        }
-
-        void dotPressed() {
-            if(!runningNumber.contains(".")) {
-                // Check for existing decimal
-                runningNumber += ".";
-                resultsView.setText(runningNumber);
-            } else {
-                Toast.makeText(getApplicationContext(), "Only 1 decimal can be entered!", Toast.LENGTH_SHORT).show();
+        } else {
+            if (runningNumber != "") {
+                leftValueStr = runningNumber;
+                runningNumber = "";
             }
         }
+        currentOperation = operation;
+    }
 
-        void numberPressed(int number) {
-            runningNumber += String.valueOf(number);
+    void dotPressed() {
+        if(!runningNumber.contains(".")) {
+            // Check for existing decimal
+            runningNumber += ".";
             resultsView.setText(runningNumber);
-
+        } else {
+            Toast.makeText(getApplicationContext(), "Only 1 decimal can be entered!", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    void numberPressed(int number) {
+        runningNumber += String.valueOf(number);
+        resultsView.setText(runningNumber);
+
+    }
 }
